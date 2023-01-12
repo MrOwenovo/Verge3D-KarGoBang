@@ -16,6 +16,8 @@
 ### 下载verge3D
 - verge3D-webGL框架，有基于blender的verge3d-blender,基于3dMax的verge3d-3dMax
 - verge3D官网:[https://verge3d.funjoy.tech/verge3d](https://verge3d.funjoy.tech/verge3d)
+### 移动项目文件
+- 每一个文件夹都是一个项目，将所有项目移动到verge3D的applications文件夹下
 
 ## 项目内容：
 ![wbe2.png](https://s2.loli.net/2022/07/01/bIhHDMVkUL2Z5Tw.png)
