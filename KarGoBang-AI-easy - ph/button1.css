@@ -1,0 +1,51 @@
+
+#button1 {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    border-radius: 30px;
+    background-size: 400%;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+#button1:hover{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+
+    }
+}
+#button1::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    border-radius: 40px;
+    background-size: 400%;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+#button1:hover::before {
+    filter: blur(20px);
+    opacity: 1;
+
+}
+
