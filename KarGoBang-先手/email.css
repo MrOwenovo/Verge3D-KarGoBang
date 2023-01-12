@@ -1,0 +1,317 @@
+
+.email-card {
+    margin: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 600px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgb(240, 246, 255);
+    border-radius: 15px;
+    /*display: none;*/
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .2);
+    animation: pop .5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: translate(-50%, -50%) scaleY(0);
+    }
+}
+
+.email-card .close {
+    position: absolute;
+    font-size: 20px;
+    color: #A56E59;
+    cursor: pointer;
+    right: 30px;
+    top: 20px;
+}
+
+.email-card .email-h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgb(82, 66, 117);
+}
+
+.email-card .email-p {
+    text-align: center;
+}
+
+.email-card .email-img {
+    width: 100px;
+    margin: 10px 0 20px;
+}
+
+.email-card .email-p {
+    color: rgb(126, 126, 126);
+    padding: 10px 20px;
+}
+
+.email-card .email-button {
+    margin-top: 10px;
+}
+
+.email-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #61ca96;
+    border-radius: 5px;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+/*a ====================*/
+
+.email-get {
+    margin: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 600px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgb(240, 246, 255);
+    border-radius: 15px;
+    /*display: none;*/
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .2);
+    animation: pop .5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: translate(-50%, -50%) scaleY(0);
+    }
+}
+
+.email-get .close {
+    position: absolute;
+    font-size: 20px;
+    color: #A56E59;
+    cursor: pointer;
+    right: 30px;
+    top: 20px;
+}
+
+.email-get .email-h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgb(82, 66, 117);
+}
+
+.email-get .email-p {
+    text-align: center;
+}
+
+.email-get .email-img {
+    width: 100px;
+    margin: 10px 0 20px;
+}
+
+.email-get .email-p {
+    color: rgb(126, 126, 126);
+    padding: 10px 20px;
+}
+
+.email-get .email-button {
+    margin-top: 10px;
+}
+
+.email-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #61ca96;
+    border-radius: 5px;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+}
+.wrapper-2{
+    background-color:rgb(240, 246, 255);
+    transform: translateY(-10px);
+    width:360px
+}
+@media screen and (max-width: 639px) {
+
+    .email-card {
+        margin: 0;
+        box-sizing: border-box;
+
+        display: flex;
+        /*justify-content: center;*/
+        /*align-items: center;*/
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        max-width: 600px;
+        height: 400px;
+        padding: 15px;
+        background-color: rgb(240, 246, 255);
+        border-radius: 10px;
+        /*display: none;*/
+        /*align-items: center;*/
+        flex-direction: column;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, .2);
+        animation: pop .5s ease;
+    }
+
+    @keyframes pop {
+        0% {
+            transform: translate(-50%, -50%) scaleY(0);
+        }
+    }
+
+    .email-card .close {
+        position: absolute;
+        font-size: 13px;
+        color: #A56E59;
+        cursor: pointer;
+        right: 15px;
+        top: 10px;
+    }
+
+    .email-card .email-h1 {
+        font-size: 10px;
+        margin: 5px 0;
+        color: rgb(82, 66, 117);
+    }
+
+    .email-card .email-p {
+        /*text-align: center;*/
+    }
+
+    .email-card .email-img {
+        width: 70px;
+        margin: 5px 0 20px;
+    }
+
+    .email-card .email-p {
+        color: rgb(126, 126, 126);
+        padding: 5px 20px;
+    }
+
+    .email-card .email-button {
+        margin-top: 5px;
+    }
+
+    .email-button {
+        padding: 5px 10px;
+        font-size: 14px;
+        background: #61ca96;
+        border-radius: 5px;
+        color: white;
+        border-color: transparent;
+        cursor: pointer;
+        transform: translateY(50px);
+
+    }
+    .wrapper-2{
+        position: absolute;
+        background-color:rgb(240, 246, 255);
+        transform: translateY(-100px);
+        width:10px
+    }
+
+    /*a ====================*/
+
+    .email-get {
+        margin: 0;
+        box-sizing: border-box;
+
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        max-width: 600px;
+        height: 400px;
+        padding: 15px;
+        background-color: rgb(240, 246, 255);
+        border-radius: 10px;
+        /*display: none;*/
+        /*align-items: center;*/
+        flex-direction: column;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, .2);
+        animation: pop .5s ease;
+    }
+
+    @keyframes pop {
+        0% {
+            transform: translate(-50%, -50%) scaleY(0);
+        }
+    }
+
+    .email-get .close {
+        position: absolute;
+        font-size: 13px;
+        color: #A56E59;
+        cursor: pointer;
+        right: 15px;
+        top: 10px;
+    }
+
+    .email-get .email-h1 {
+        font-size: 10px;
+        margin: 5px 0;
+        color: rgb(82, 66, 117);
+    }
+
+    .email-get .email-p {
+        /*text-align: center;*/
+    }
+
+    .email-get .email-img {
+        width: 70px;
+        margin: 5px 0 20px;
+    }
+
+    .email-get .email-p {
+        color: rgb(126, 126, 126);
+        padding: 5px 10px;
+    }
+
+    .email-get .email-button {
+        margin-top: 5px;
+    }
+
+    .email-button {
+        padding: 5px 10px;
+        font-size: 14px;
+        background: #61ca96;
+        border-radius: 5px;
+        color: white;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+
+}

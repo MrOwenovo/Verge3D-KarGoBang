@@ -1,0 +1,133 @@
+.wrapper {
+    transform: translateY(45px);
+    width: 150px;
+    background-color: #fff;
+    /* 内边距（上下左右） */
+    padding: 15px;
+    /* 盒子阴影 */
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    /* 圆角 */
+    border-radius: 8px;
+}
+.wrapper .input-data{
+    /* 相对定位 */
+    position:relative;
+    width: 100%;
+    height: 30px;
+}
+.wrapper .input-data .wrapper-input{
+    outline:none;
+    width: 100%;
+    height: 100%;
+    border:none;
+    font-size: 12px;
+    border-bottom: 2px solid #c0c0c0;
+}
+/* 输入框获得焦点时 */
+.wrapper .input-data .wrapper-input:focus ~ .wrapper-label,
+    /* 输入框的值为合法时 */
+.wrapper .input-data .wrapper-input:valid ~ .wrapper-label{
+    /* label上移，同时改变字号、字体颜色 */
+    transform: translateY(-16px);
+    font-size: 12px;
+    color: #2c6fdb;
+}
+.wrapper .input-data .wrapper-label{
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    color: #808080;
+    /* 这个属性可以使点击label穿透到输入框 */
+    pointer-events: none;
+    /* 现在动画有点生硬，在这里需要给动画加个过渡 */
+    transition: all 0.3s ease;
+}
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    background-color: #2c6fdb;
+    /* 沿X轴缩小 */
+    transform: scaleX(0);
+    /* 这里同样给动画加个过渡 */
+    transition: all 0.3s ease;
+}
+.wrapper .input-data .wrapper-input:focus ~ .underline,
+.wrapper .input-data .wrapper-input:valid ~ .underline{
+    /* 沿X轴放大 */
+    transform: scaleX(1);
+}
+
+.wrapper-2 {
+    margin-top: 10px;
+    transform: translateY(45px);
+    width: 250px;
+    background-color: #fff;
+    /* 内边距（上下左右） */
+    padding: 12px;
+    /* 盒子阴影 */
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    /* 圆角 */
+    border-radius: 8px;
+}
+.wrapper-2 .input-data-2{
+    /* 相对定位 */
+    position:relative;
+    width: 100%;
+    height: 30px;
+}
+.wrapper-2 .input-data-2 .wrapper-input-2{
+    outline:none;
+    width: 100%;
+    height: 100%;
+    border:none;
+    font-size: 5px;
+    border-bottom: 2px solid #c0c0c0;
+}
+/* 输入框获得焦点时 */
+.wrapper-2 .input-data-2 .wrapper-input-2:focus ~ .wrapper-label-2,
+    /* 输入框的值为合法时 */
+.wrapper-2 .input-data-2 .wrapper-input-2:valid ~ .wrapper-label-2{
+    /* label上移，同时改变字号、字体颜色 */
+    transform: translateY(-16px);
+    font-size: 7px;
+    color: #2c6fdb;
+}
+.wrapper-2 .input-data-2 .wrapper-label-2{
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    color: #808080;
+    /* 这个属性可以使点击label穿透到输入框 */
+    pointer-events: none;
+    /* 现在动画有点生硬，在这里需要给动画加个过渡 */
+    transition: all 0.3s ease;
+}
+.wrapper-2 .input-data-2 .underline-2{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    background-color: #2c6fdb;
+    /* 沿X轴缩小 */
+    transform: scaleX(0);
+    /* 这里同样给动画加个过渡 */
+    transition: all 0.3s ease;
+}
+.wrapper-2 .input-data-2 .wrapper-input-2:focus ~ .underline-2,
+.wrapper-2 .input-data-2 .wrapper-input-2:valid ~ .underline-2{
+    /* 沿X轴放大 */
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
