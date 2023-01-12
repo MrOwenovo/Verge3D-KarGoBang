@@ -1,0 +1,142 @@
+#button1{
+    display:none;
+}
+
+#all{
+display: none;
+}
+* {
+    /*  初始化 取消页面内外边距  */
+    margin: 0;
+    padding: 0;
+/*  告诉浏览器，边框和内距包括在总宽高里  */
+    box-sizing: border-box;
+}
+body{
+/*    100%窗口高度  */
+    height: 100vh;
+    /*  弹性布局，水平，垂直居中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#eef1f5;
+}
+#loading {
+    display: flex;
+    /*  水平显示  */
+    flex-direction: row;
+
+}
+#loading div {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    /*  渐变背景  */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #eef1f5);
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid #eef1f5;
+    /*  阴影 */
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fff,
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+/*  溢出隐藏  */
+    overflow: hidden;
+
+}
+#loading div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.1), 0 420px 0 400px lightskyblue;
+
+    /*  执行动画:动画名称 时长 加速后减速 无限次播放  */
+    animation: animate 2s ease-in-out infinite;
+    /*  动画延迟 通过var函数获取自定义属性--x,再出calc函数计算得出每个元素的动画延迟时间*/
+    animation-delay: calc(var(--x) * 0.3s);
+    /*  初始化时先向上移动160px*/
+    transform: translateY(160px);
+
+
+}
+
+/*  定义动画 */
+@keyframes animate {
+    0% {
+        transform: translateY(160px);
+        /*hue-rotate使眼色滤镜，可以设置不同的度数来改变颜色*/
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        transform: translateY(0px);
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        transform: translateY(160px);
+        filter: hue-rotate(360deg);
+    }
+
+}
+
+#gwd-p-vmkb {
+    position: absolute;
+    /*width: 206px;*/
+    /*height: 29px;*/
+    color: rgb(134, 97, 97);
+    /*left: 391px;*/
+    top: 530px;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    font-family: "Arial Black";
+    font-weight: bold;
+
+}
+#gwd-p-vmkb3{
+    display:none;
+
+    position: absolute;
+    /*width: 206px;*/
+    /*height: 29px;*/
+    color: rgb(134, 97, 97);
+    /*left: 391px;*/
+    top: 50px;
+    justify-content: center;
+    /*align-items: center;*/
+    font-family: "Arial Black";
+    font-size: 24px;
+    font-weight: bold;
+
+}
+#gwd-p-vmkb4 {
+    display:none;
+    position: absolute;
+    /*width: 206px;*/
+    /*height: 29px;*/
+    color: rgb(134, 97, 97);
+    /*left: 391px;*/
+    top: 44px;
+    left:53%;
+    /*align-items: center;*/
+    font-family: "Arial Black";
+    font-size: 24px;
+    font-weight: bold;
+
+}
+iframe {
+    position: absolute;
+    top: 0px;
+
+}
+#close {
+    background-image: url(close.png);
+    position: relative;
+    top: -25%;
+    left: 10%;
+
+
+}
