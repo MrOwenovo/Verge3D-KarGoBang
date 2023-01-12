@@ -5,10 +5,10 @@
 - 含有前端加载和再来一局等界面
 
 ### 试玩地址:
-[三维四子棋AI-困难](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200)
-[三维四子棋AI-中级](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200)
-[三维四子棋AI-简单](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200)
-[三维四子棋AI-本地联机](https://f01-1309918226.file.myqcloud.com/42/2022/09/11/%E6%9C%AC%E5%9C%B01/loading.html?x-cos-traffic-limit=819200)
+[三维四子棋AI-困难](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200) <br>
+[三维四子棋AI-中级](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200) <br>
+[三维四子棋AI-简单](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200) <br>
+[三维四子棋AI-本地联机](https://f01-1309918226.file.myqcloud.com/42/2022/09/11/%E6%9C%AC%E5%9C%B01/loading.html?x-cos-traffic-limit=819200) <br>
 
 
 
