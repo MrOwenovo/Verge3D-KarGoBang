@@ -3,6 +3,7 @@
 - 将blender开发的五子棋及动画与web3d整合
 - 基于空间AI的三维四子棋
 - 含有前端加载和再来一局等界面
+- ph是手机操作版本，下棋操作需要双击防误触。
 
 ### 试玩地址:
 [三维四子棋AI-困难](https://f01-1309918226.file.myqcloud.com/42/2022/09/12/%E5%9B%B0%E9%9A%BE4/loading.html?x-cos-traffic-limit=819200) <br>
