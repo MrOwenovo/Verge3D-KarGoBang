@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="card.css">
+    <link id="buttoncss" rel="stylesheet" href=""/>
+    <iframe src="KarGoBang2.html" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe id="all" src="tip.html" width="100%" height="100%" frameborder="0" onclick="close()"></iframe>
+    <script type="text/javascript" src="loading.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="email.css">
+    <link rel="stylesheet" href="input.css">
+    <script src="email.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+        integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>
+    //获取用户和对方信息
+    getUserDetails();
+
+    function getUserDetails() {
+        $.ajax({
+            type: "get",
+            url: 'http://mch6xzsh3.neiwangyun.net/api/chat/getUserDetails',
+            // url: 'http://localhost/api/chat/getUserDetails',
+            async: true,
+            data: {},
+            dataType:"json",
+            xhrFields:{
+                withCredentials: true,
+            },
+            success: function (data) {
+                if (data.code === 200) {
+                    modifyUserCard(data.data);
+                } else {
+                    window.alert(data.message);
+                }
+            },
+            error: function () {
+                console.info("服务器未连接!");
+                window.alert("时间超出限制，请重新登录!")
+            },
+        });
+    }
+
+    $(function () {  //防止信息超出的方案
+        var user1_word = $("#user1-span").text();
+        if (user1_word.length > 17) {
+            var newWord = user1_word.substring(0, 17);
+            $("#user1-span").text(newWord + "...");
+        };
+        var user2_word = $("#user2-span").text();
+        if (user2_word.length > 17) {
+            var newWord = user2_word.substring(0, 17);
+            $("#user2-span").text(newWord + "...");
+        }
+        //修改用户card内容
+
+    });
+    window.onload = init();
+
+</script>
+<body id="back">
+<div id="loading">
+    <div style="--x:0"></div>
+    <div style="--x:1"></div>
+    <div style="--x:2"></div>
+    <div style="--x:3"></div>
+    <div style="--x:4"></div>
+    <div style="--x:5"></div>
+</div>
+<p id="gwd-p-vmkb">0%</p>
+<p id="gwd-p-vmkb3">黑棋胜利</p>
+<img id="gwd-p-vmkb4" src="wow.png">
+<a id="button1" href="#">再来一局</a>
+<div class="email-get-no"></div>
+<div class="email-card-no"></div>
+<div class="card2" >
+    <div class="content">
+        <div class="imgBx">
+            <img class="my-img" src="boy.png">
+        </div>
+        <h2 id="user1-h2">Someone Famous<br>
+            <span class="user1-span">Website Designer</span>
+            <i id="user1-sex" class="fa fa-mars i-user" aria-hidden="true" style="color: #0679a2; font-size: 1px;"></i>
+        </h2>
+    </div>
+    <ul class="navigation">
+        <li>
+            <a id="my-a-1" href="#">
+                <ion-icon name="game-controller-outline"></ion-icon>
+                总场次数 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                0
+            </a>
+        </li>
+        <li>
+            <a id="my-a-2" href="#">
+                <ion-icon name="trophy-outline"></ion-icon>
+                游戏胜率 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                0%
+            </a>
+        </li>
+        <li>
+            <a id="my-a-3" href="#">
+                <ion-icon name="checkmark-done-outline"></ion-icon>
+                熄灯关数 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                0
+            </a>
+        </li>
+
+    </ul>
+    <div class="toggle">
+        <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+</div>
+<div id="card" class="card" style="left:76%;top: 30px; ">
+    <div class="content">
+        <div class="imgBx">
+            <img class="opp-img" src="girl.png">
+        </div>
+        <h2 id="user2-h2">Someone Famous<br>
+            <span class="user1-span">Website Designer</span>
+            <i id="user2-sex" class="fa fa-venus i-user" aria-hidden="true" style="color: #d91616; font-size: 1px;"></i>
+
+        </h2>
+    </div>
+    <ul class="navigation">
+        <li>
+            <a id="opp-a-1" href="#">
+                <ion-icon name="game-controller-outline"></ion-icon>
+                总场次数 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                0
+            </a>
+        </li>
+        <li>
+            <a id="opp-a-2" href="#">
+                <ion-icon name="trophy-outline"></ion-icon>
+                游戏胜率 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                0%
+            </a>
+        </li>
+        <li>
+            <a id="opp-a-3" href="#">
+                <ion-icon name="checkmark-done-outline"></ion-icon>
+                熄灯关数 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                0
+            </a>
+        </li>
+        <li>
+            <a href="javascript:window.alert('功能正在开发中...')">
+                <ion-icon name="person-add-outline"></ion-icon>
+                加好友
+            </a>
+        </li>
+        <li>
+            <a id="opp-a-5" href="javascript:openSendMessageWindow()">
+                <ion-icon name="chatbox-outline"></ion-icon>
+                发送信息
+            </a>
+        </li>
+    </ul>
+    <div id="toggle" class="toggle">
+        <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const card = document.querySelector('.card2');
+    const cardtoggle = document.querySelector('.toggle');
+    cardtoggle.onclick = function () {
+        card.classList.toggle('active');
+    };
+    const card2 = document.querySelector('#card');
+    const cardtoggle2 = document.querySelector('#toggle');
+    cardtoggle2.onclick = function () {
+        card2.classList.toggle('active');
+    };
+    function openGetMessageWindow(message) {
+        $(".email-get-no").html("<div class=\"email-get\">" +
+            "<a class=\"close\" href=\"javascript:closeGet()\">X</a>\n" +
+            "    <h1 class=\"email-h1\">你好, Welcome.</h1>\n" +
+            "    <h1 class=\"email-h1\">这是对方发给你的消息</h1>\n" +
+            "    <img class=\"email-img\" src=\"./email.svg\" alt=\"\">\n" +
+            "      <p class=\"email-p\" style='transform: translateY(-20px)'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, accusamus !</p>\n  "+
+            "    <button class=\"email-button\" onclick=\"closeGet();openSendMessageWindow()\">回信</button>\n" +
+            "</div>")
+        $(".email-p").text(message);
+
+    }
+    function openSendMessageWindow() {
+        $(".email-card-no").html("<div class=\"email-card\">" +
+            "<a class=\"close\" href=\"javascript:close()\">X</a>\n" +
+            "    <h1 class=\"email-h1\">你好, Welcome.</h1>\n" +
+            "    <h1 class=\"email-h1\">输入要给对方发送的信息.</h1>\n" +
+            "    <img class=\"email-img\" src=\"./email.svg\" alt=\"\">\n" +
+            "    <div class=\"wrapper-2\" >\n" +
+            "        <div class=\"input-data-2\">\n" +
+            "            <input class=\"wrapper-input-2\" style=\"background-color:rgb(240, 246, 255)\" type=\"text\" required>\n" +
+            "            <div class=\"underline-2\"></div>\n" +
+            "            <label class=\"wrapper-label-2\">您的消息</label>\n" +
+            "            </div>\n" +
+            "        </div>\n" +
+            "    <button class=\"email-button\" onclick=\"sendMessage()\">subscribe</button>\n" +
+            "</div>")
+    }
+</script>
+
+
+
+
+</body>
+</html>
