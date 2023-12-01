@@ -6,7 +6,7 @@ function sendMessage() {
     }
     $.ajax({
         type: "post",
-        url: 'http://mch6xzsh3.neiwangyun.net/api/chat/sendMessage',
+        url: 'https://kargobang.top/api/chat/sendMessage',
         async: true,
         data: {
             message:email,
@@ -142,7 +142,7 @@ function init() {
 function waitForMessage() {
     $.ajax({
         type:'get',
-        url:'http://mch6xzsh3.neiwangyun.net/api/chat/getMessage',
+        url:'https://kargobang.top/api/chat/getMessage',
         async:true,
         dataType:'json',
         xhrFields:{
