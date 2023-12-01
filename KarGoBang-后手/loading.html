@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="email.css">
     <link rel="stylesheet" href="input.css">
     <script src="email.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
         integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
@@ -71,6 +73,24 @@
 
 </script>
 <body id="back">
+<script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+
+
+<script>
+
+    // 显示一个自定义的弹窗提示
+    iziToast.show({
+        title: '提示',
+        message: '加载中，请耐心等待... 如果一直为0，请刷新页面。',
+        position: 'topCenter', // 弹窗位置
+        timeout: 5000, // 显示时长，单位是毫秒
+        close: true, // 显示关闭按钮
+        progressBar: true, // 显示进度条
+        color: 'blue', // 背景颜色
+        icon: 'fa fa-info-circle', // 使用Font Awesome图标
+    });
+</script>
+
 <div id="loading">
     <div style="--x:0"></div>
     <div style="--x:1"></div>
